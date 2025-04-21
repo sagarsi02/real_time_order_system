@@ -1,0 +1,34 @@
+[project]
+name = "real-time-order-system"
+version = "0.1.0"
+description = "Real-time order processing system with FastAPI, Kafka, PostgreSQL, Elasticsearch"
+requires-python = ">=3.12"
+authors = [
+    { name="Sagar Singh", email="sagarsi2408@gmail.com" }
+]
+
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "pre-commit",
+    "commitizen",
+    "httpx",          # for API testing
+    "pytest",
+    "pytest-asyncio",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-select = ["I"]
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.1.0"
+tag_format = "v$version"
+update_changelog_on_bump = true
