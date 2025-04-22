@@ -10,6 +10,7 @@ authors = [
 dependencies = [
     "fastapi",
     "uvicorn[standard]",
+    "aiokafka"
 ]
 
 [project.optional-dependencies]
